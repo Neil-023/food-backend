@@ -36,3 +36,5 @@ EXPOSE 80
 
 # Start Apache
 CMD ["apache2-foreground"]
+CMD ["bash", "-c", "sed -i 's/80/${PORT}/g' /etc/apache2/ports.conf && apache2-foreground"]
+
